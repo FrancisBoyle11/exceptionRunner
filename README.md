@@ -5,14 +5,14 @@ Tasks to answer in your own README.md that you submit on Canvas:
 2.	Where does this line come from? FINER org.junit.jupiter.engine.execution.ConditionEvaluator logResult Evaluation of condition [org.junit.jupiter.engine.extension.DisabledCondition] resulted in: ConditionEvaluationResult [enabled = true, reason = '@Disabled is not present']
 It comes from logger.info("Calling took: "+ (System.currentTimeMillis() - timeNow)). Once it starts evaluating an unexpected exception is encountered.
 3.	What does Assertions.assertThrows do?
-Assertions.assertThrows asserts that a specific exception is thrown. In other words, it makes sure that the program encounters an exception. In this scenario, it asserts that a TimerException is thrown. However, a NullPointerException is thrown, hence there is an exception.
-4.	See TimerException and there are 3 questions
-1.	What is serialVersionUID why do we need it? (please read on Internet)
-The serialVersionUID is an id system that helps understand the specific version of class that we are using for serialization and deserialization. Exceptions happen to be serializable classes, so we include this in the Exception class because we want in to work as intended, just like we do any other serializable class.
-2.	Why do we need to override constructors?
-We override constructors to we get the desired functionality of the current class instead of that of the normal Exception class. 
-3.	Why did we not override other Exception methods?
-We did not override the other Exception methods because we like the information that it offers. If we did this, we complicate our code for no reason. We like the product of the other methods because it considers general exceptions and has the desired output. We only want to override the methods that do not help us in our task.
+    Assertions.assertThrows asserts that a specific exception is thrown. In other words, it makes sure that the program encounters an exception. In this scenario, it asserts     that a TimerException is thrown. However, a NullPointerException is thrown, hence there is an exception.
+4.  See TimerException and there are 3 questions.
+5.  What is serialVersionUID why do we need it? (please read on Internet)
+    The serialVersionUID is an id system that helps understand the specific version of class that we are using for serialization and deserialization. Exceptions happen to be     serializable classes, so we include this in the Exception class because we want in to work as intended, just like we do any other serializable class.
+    Why do we need to override constructors?
+    We override constructors to we get the desired functionality of the current class instead of that of the normal Exception class. 
+    Why did we not override other Exception methods?
+    We did not override the other Exception methods because we like the information that it offers. If we did this, we complicate our code for no reason. We like the product     of the other methods because it considers general exceptions and has the desired output. We only want to override the methods that do not help us in our task.
 5.	The Timer.java has a static block static {}, what does it do? (determine when called by debugger) 
 The static block begins execution when the Timer class gets initialized. The static block serves as a good way to initialize static variables. In this instance, upon the class’s initialization it opens the logger.properties file and sets the properties.
 
@@ -25,4 +25,4 @@ The actual issue is that there is a NullPointerException. Sequence: It runs the 
 11.	What category of Exceptions is TimerException and what is NullPointerException
 -	A NullPointerException is considered a RuntimeException and a TimerException is implemented by extending the Exception class.
 12.	Push the updated/fixed source code to your own repository.
-I did.
+https://github.com/FrancisBoyle11/exceptionRunner
