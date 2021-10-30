@@ -1,7 +1,8 @@
 Tasks to answer in your own README.md that you submit on Canvas:
 
 1.  See logger.log, why is it different from the log to console?
-    With the log we have warnings that specify a level. We use the log to log messages to help us analyze problems. The console displays exceptions. In this example, we see that   2.	Where does this line come from? FINER org.junit.jupiter.engine.execution.ConditionEvaluator logResult Evaluation of condition [org.junit.jupiter.engine.extension.DisabledCondition] resulted in: ConditionEvaluationResult [enabled = true, reason = '@Disabled is not present']
+    With the log we have warnings that specify a level. We use the log to log messages to help us analyze problems. The console displays exceptions. In this example, we see     that   
+2.	Where does this line come from? FINER org.junit.jupiter.engine.execution.ConditionEvaluator logResult Evaluation of condition [org.junit.jupiter.engine.extension.DisabledCondition] resulted in: ConditionEvaluationResult [enabled = true, reason = '@Disabled is not present']
 It comes from logger.info("Calling took: "+ (System.currentTimeMillis() - timeNow)). Once it starts evaluating an unexpected exception is encountered.
 3.	What does Assertions.assertThrows do?
 Assertions.assertThrows asserts that a specific exception is thrown. In other words, it makes sure that the program encounters an exception. In this scenario, it asserts that a TimerException is thrown. However, a NullPointerException is thrown, hence there is an exception.
